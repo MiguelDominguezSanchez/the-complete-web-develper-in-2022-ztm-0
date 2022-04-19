@@ -71,7 +71,82 @@ var a = function (a, b) {
 a()
 */
 
+/*
 function multiply(a, b) {
 	return a * b
 }
 alert(multiply(3, 4))
+*/
+
+/*
+var list = ['tiger', 'cat', 'bear', 'bird']
+console.log(list[0])
+
+var numbers = [1, 2, 3, 4]
+
+var booleans = [true, false, true]
+
+var functionsList = [
+	function apple() {
+		console.log('apple')
+	},
+]
+
+var mixedList = [
+	'apples',
+	3,
+	undefined,
+	true,
+	function apple() {
+		console.log('apple')
+	},
+]
+*/
+
+/*
+var list = [['tiger', 'cat', ' bear', 'bird']]
+
+// console.log(list[0])
+// console.log(list)
+console.log(list[0][2])
+*/
+
+// var list = ['tiger', 'cat', 'bear', 'bird']
+
+// list.shift()
+
+// console.log(list)
+
+/* Tiger has been removed, I shifted everything tto the left */
+
+// list.pop()
+
+// console.log(list)
+
+/* It has pop bird off of the end of the array */
+
+// list.push('elephant')
+
+// console.log(list)
+
+// list.concat(['bee', 'deer'])
+
+// console.log(list)
+
+/*
+var list = ['tiger', 'cat', 'bear', 'bird']
+
+list.concat(['bee', 'deer'])
+
+console.log(list)
+
+list.sort()
+*/
+
+var myList = ['cat', 'bear', 'elephant', 'deer']
+
+var myNewList = myList.concat(['monkey'])
+
+console.log(myList)
+
+console.log(myNewList)
