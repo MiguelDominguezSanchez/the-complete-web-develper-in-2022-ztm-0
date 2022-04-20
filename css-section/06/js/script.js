@@ -143,6 +143,7 @@ console.log(list)
 list.sort()
 */
 
+/*
 var myList = ['cat', 'bear', 'elephant', 'deer']
 
 var myNewList = myList.concat(['monkey'])
@@ -150,3 +151,45 @@ var myNewList = myList.concat(['monkey'])
 console.log(myList)
 
 console.log(myNewList)
+*/
+
+/*
+var user = {
+	name: 'JohnyMentero',
+	age: 34,
+	hobby: 'Soccer',
+	isMarried: false,
+}
+
+var list = ['apple', 'banana', 'orange']
+
+user.favouriteFood = 'spinach'
+
+user.isMarried = true
+*/
+
+var user = {
+	name: 'JohnyMentero',
+	age: 34,
+	hobby: 'Soccer',
+	isMarried: false,
+	spells: ['abrakadabra', 'shazam', 'boo'],
+	shout: function () {
+		console.log('AHHH!')
+	},
+}
+
+var list = [
+	{
+		username: 'andy',
+		password: 'secret',
+	},
+	{
+		username: 'jess',
+		password: '123',
+	},
+]
+
+var emptyObject = {}
+
+var nullObj = null
