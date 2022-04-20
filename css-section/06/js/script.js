@@ -263,7 +263,7 @@ obj.thisIsAMethod()
 */
 
 // LOOPING
-
+/*
 var todos = [
 	'clean room',
 	'brush teeth',
@@ -279,16 +279,16 @@ var todosImportant = [
 	'study javascript!',
 	'eat healthy!',
 ]
-
+*/
 // var todosLength = todos.length
 // for (var i = 0; i < todosLength; i++) {
 // 	console.log(i)
 // }
 
-var todosLength = todos.length
-for (var i = 0; i < todosLength; i++) {
-	console.log(todos[i], i)
-}
+// var todosLength = todos.length
+// for (var i = 0; i < todosLength; i++) {
+// 	console.log(todos[i], i)
+// }
 
 // todos.forEach(function (i) {
 // 	console.log(i)
@@ -298,12 +298,12 @@ for (var i = 0; i < todosLength; i++) {
 // 	console.log(todo, i)
 // })
 
-function logTodos(todo, i) {
-	console.log(todo, i)
-}
+// function logTodos(todo, i) {
+// 	console.log(todo, i)
+// }
 
-todos.forEach(logTodos)
-todosImportant.forEach(logTodos)
+// todos.forEach(logTodos)
+// todosImportant.forEach(logTodos)
 
 // for (var i = 0; i < todosLength; i++) {
 // 	// console.log(todos[i] + '!')
@@ -343,3 +343,60 @@ do {
 	counterTwo--
 } while (counterTwo > 0)
 */
+
+// ////////
+
+var database = [
+	{
+		username: 'andrei',
+		password: 'supersecret',
+	},
+	{
+		username: 'sally',
+		password: '123',
+	},
+	{
+		username: 'ingrid',
+		password: '777',
+	},
+]
+
+var newsfeed = [
+	{
+		username: 'Bobby',
+		timeline: 'So tired from all that learning!',
+	},
+	{
+		username: 'Sally',
+		timeline: 'Javascript is so cool!',
+	},
+	{
+		username: 'Mitch',
+		timeline: 'Javascript is preeetyy cool!',
+	},
+]
+
+function isUserValid(username, password) {
+	for (var i = 0; i < database.length; i++) {
+		if (
+			database[i].username === username &&
+			database[i].password === password
+		) {
+			return true
+		}
+	}
+	return false
+}
+
+function signIn(username, password) {
+	if (isUserValid(username, password)) {
+		console.log(newsfeed)
+	} else {
+		alert('Sorry, wrong username and password')
+	}
+}
+
+var userNamePrompt = prompt("What's your username?")
+var passwordPrompt = prompt("What's your password?")
+
+signIn(userNamePrompt, passwordPrompt)
