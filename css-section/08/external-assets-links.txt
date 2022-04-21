@@ -1,0 +1,12 @@
+
+HTML-DOM-W3C
+https://www.w3schools.com/js/js_htmldom.asp
+
+Event-Reference-MDN
+https://developer.mozilla.org/en-US/docs/Web/Events
+
+Javascript-Char-Codes-Key-Codes-
+https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+
+jQuery-vs-Javascript
+http://youmightnotneedjquery.com/
