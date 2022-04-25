@@ -200,9 +200,3 @@ wizard2.play = function () {
 // with that it gives us a lot of power
 //
 //
-//
-//
-//
-//
-//
-//
