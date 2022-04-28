@@ -225,25 +225,248 @@ I can say function moveCommand
 function moveCommand(
   // and we will say:
   // it accepts parameter 'direction'
-)
+  direction
+) {
+  var whatHappens;
+  // and we say: 
+  switch (
+    // the switch statement is gonna check 'direction'
+    direction) {
+      // and within here: 
+      // we say:
+      case "forward":
+      // then whatHappens equals to "you encountered a monster"
+      whatHappens = "You encountered a monster"
+      break;
+      // the rest of the case statements
+      // the cse statements as see  are really good
+      // because I  can just copy and paste
+      case "forward":
+        whatHappens = "you encountered a monster";
+        break;
+      case "back":
+        whatHappens = "you arrived home";
+        break;
+      case "right":
+        whatHappens = "you found a river";
+        break;
+      case "left":
+        whatHappens = "you run into a troll";
+        break;
+      // and finally
+      default:
+        whatHappens = "please enter a valid direction";
+    }
+    // and we ended with a:
+    returns whatHappens;
+}
 
+// ok, there was a lot whole of code
 
+lets run this command first and then I will explain
+what is happening
+copy the code into the console
 
+// 
 
+function moveCommand(direction) {
+  var whatHappens;
+  switch (direction) {
+    case "forward":
+      whatHappens = "you encountered a monster";
+      break;
+    case "back":
+      whatHappens = "you arrived home";
+      break;
+    case "right":
+      whatHappens = "you found a river";
+      break;
+    case "left":
+      whatHappens = "you run into troll";
+      break;
+    default:
+      whatHappens = "please enter a valid direction"
+  }
+  return whatHappens;
+}
 
+//
 
+and now we have the moveCommand()
+and if you remember the last video
+now exist in the root scope
 
+window.moveCommand(
+  // within here
+  // we 've just say:
+  "forward"
+);
 
+now if I run this:
 
+window.moveCommand("forward");
+"you encountered a monster"
 
+If I go back:
 
+window.moveCommand("back");
+"you arrived home"
 
+if I go right:
 
+window.moveCommand("right");
+"you found a river"
 
+If I go left:
 
+window.moveCommand("left");
+"you run into troll"
 
+and if I do gibberish 
 
+window.moveCommand("9871345");
+"please enter a valid direction"
 
+Thats is what switch statements are really good
+for when we have a lot of conditions
 
+instead of using:
+
+if else if
+if else if
+if else if
+if else if
+statement
+
+you can use a 'switch' statement 
+and you can see it is easy to read, nicely
+essentially  what is saying is
+
+function moveCommand(direction) {
+  // create a variable whatHappens
+  var whatHappens;
+  switch(
+    // the switch¡
+    // I want you to check whatever the condition is
+    // whatever the  variable is,
+    // in this case is the 'direction'
+    direction) {
+
+      // and in case the direction equals "forward"
+      case "forward":
+        // do this: 
+        whatHappens = "you encountered a monster"
+        break;
+      // in case the direction is back
+      case "back":
+        // do this: 
+        whatHappens = "you arrived home"
+        break;
+      // in case the direction is right
+      case "right":
+        // do this
+        whatHappens = "you found a river"
+        break;
+      // in the case the direction is left
+      case "left":
+        // do this
+        whatHappens = "you run into a troll"
+        break;
+      // default is:
+      // if none of these conditions work
+      // and remember the program goes line by line
+      // so it checks "forward"
+      // it checks "back"
+      // it checks "right"
+      // it checks "left"
+      // and if nothing of those match
+      // it says you can just default
+      // "please enter a valid direction"
+    }
+    // and then we return 'whatHappens'
+    // so tat the function rerun something for us
+    return whatHappens
+  }
+
+and finally what is the break,
+the break simply says
+if cases "forward"
+then assign:
+"you encountered a monster"
+and the 'break'
+'break' is just saying
+break out the switch statement
+so instead of the program 
+then checking to see
+case "back",
+case "right",
+case "left",
+default
+if we say 'break' 
+the program stops here
+and then go under the switch statement
+to return whatHappens
+
+So if I actually do
+'break'
+before 
+whatHappens = "you encountered a monster"
+
+if I copy this:
+
+function moveCommand(direction) {
+  var whatHappens;
+  switch(direction) {
+    case "forward":
+    break
+      whatHappens = "you encountered a monster"
+    case "back":
+      whatHappens = "you arrived home"
+      break
+    case "right":
+      whatHappens = "you found a river"
+      break
+    case "left":
+      whatHappens = "you run into a troll"
+      break;
+    default:
+      whatHappens  = "please enter a valid direction"
+  }
+  return whatHappens
+}
+
+we say:
+
+moveCommand("forward")
+
+Notice what happens now:
+I get:
+
+undefined
+
+because we broke,
+the program enter 
+amd say:
+
+oh ya,
+he typed in "forward"
+but we aren't able to assign something to the variable
+I say break
+exit out of the  switch statement
+and return whatHappens 
+which is only been declared
+its unassigned
+I just return undefined
+
+all right, there you have it
+there two other conditionals
+
+and you' ve cover all of them
+in javascript now
+each one its good for its own
+individual case
+but they are all very useful
+I see you in the next one
+Bye
 
 */
