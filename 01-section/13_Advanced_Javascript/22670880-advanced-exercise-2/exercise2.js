@@ -8,6 +8,13 @@ function experiencePoints() {
 }
 
 //
+// mine mistaken 220428
+const experiencePoints = winBattle ? 10 : 1
+//
+
+var experiencedPoints = winBattle() ? 10 : 1 // andrei
+
+//
 
 var experiencePoints = function () {
 	winBattle ? 10 : 1
