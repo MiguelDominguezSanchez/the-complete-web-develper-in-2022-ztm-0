@@ -72,4 +72,74 @@ it doesn't include bird
 pets.includes('bird')
 false
 
+very simple
+That's it that's one of them
+and then
+The second one is 'exponential operator'
+So if I want to have a function
+that let's say squares something
+can do function x is x
+star star two
+
+const square = (x) => x**2
+
+and that means x to the power of two
+
+So again if I run this
+and I do square of two
+
+square(2)
+
+//
+
+const square = (x) => x**2
+square(2) // 4 
+
+//
+
+I get four
+if I do square of 5
+
+//
+
+const square = (x) => x**2
+square(5) // 25 
+
+//
+
+if I want to expand on this 
+and do a 'cube'
+well I do:
+
+const cube = (y) => y**3
+
+three, exponential three
+So again, if I clear this
+just to make a bit of space
+and I do cube of three 
+I get 27
+
+//
+
+const cube = (y) => y**3
+cube(3) // 27 
+
+//
+
+const cube = (y) => y**3
+cube(4) // 64
+
+and that's it isn't that nice
+
+ECMAscript is going to release
+small incremental changes
+every year
+so it is easy to stay on top of language and avoid scenarios
+like ES6
+tat all of these change where made
+and people had a hard time learning all of them
+
+Now with these simple two things in your tool belt
+practice them and I see you in  the next video
+
 */
