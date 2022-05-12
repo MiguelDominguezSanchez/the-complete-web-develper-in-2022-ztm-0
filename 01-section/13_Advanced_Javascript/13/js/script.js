@@ -515,4 +515,264 @@ and then we are gonna visit
 in the next video
 Bye bye
 
+//7/ part 3
+
+welcome back,
+lets talk about
+the 
+'Nullish coalescing Operator'
+and it is this double question mark '??'
+
+So remember
+we learned about the 
+'BigInt'
+and we also learn about the 
+'Optional Chaining'
+the question mark and the period 
+'?.'
+
+So what does this double question mark '??' means
+This double question mark ??
+can often be used
+instead what we see before 
+the 
+or operator 
+'||'
+So let me show what I mean
+Lets imagine that I have a new property
+and we call it power
+and power for pikachu
+is lightning
+
+//
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: 'lightning'
+  }
+}
+
+//
+
+Now if I want to get the power of
+my pokemon
+then I can simply do this:
+
+let power = andrei_pokemon?.pikachu?.power
+
+and grab the property called power
+but lets say we weren't sure that
+we have this property for the pokemon
+so we cant really do question mark period '?.'
+
+let power = andrei_pokemon?.pikachu?.power?.
+
+because that really doesn't make sense
+remember the optional chaining operator
+works on objects and check in the properties
+but power is the end of the chain
+we can't really do anything
+Most of the time 
+what we can do is an or operator '||'
+
+So if lets say pikachu doesn't have a power
+let's say 'no power'
+
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+
+so lets imagine here that we have an empty string
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: ''
+  }
+}
+
+or maybe not even the property
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30
+  }
+}
+
+if I copy this code and run this
+
+//
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30
+  }
+}
+
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+console.log(power) // 'no power'
+
+//
+
+I get no power
+
+'no power'
+
+that make sense right?
+but what iif we had
+power in here
+but its an empty string
+what would happen then?
+
+well, if I run this again 
+
+//
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: ''
+  }
+}
+
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+console.log(power) // 'no power'
+
+//
+
+I get no power again
+
+'no power'
+
+and thats because this or operator ||
+works by checking
+if this is truthy
+(referring to the left part of the or operator ||)
+
+andrei?.pikachu?.power || 
+
+if its no truthy it resorts to 'no power'
+(referring to the right part of the or operator ||)
+
+|| 'no power'
+
+thats how javascript works
+so this empty 
+    power: ''
+evaluates as false
+and I get no power
+but, what if the power were false
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: false
+  }
+}
+
+once again this would resort to false
+
+andrei?.pikachu?.power ||
+
+and I get 'no power'
+
+but what  if this to be an empty string
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: ''
+  }
+}
+
+we wanna check if this is null or undefined
+    power: ''
+only then we wanna get no power
+otherwise maybe this pikachu
+still evolving
+and doesn't have any power
+but we don't necessary want to say 'no power'
+well, in that case we say
+the 
+'Nullish Coalescing'
+'??'
+and this instead of the or operator ||
+doesn't check if a value is falsy
+instead it checks
+if its null or undefined
+
+So things like zero 0 for example
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: 0
+  }
+}
+
+
+let power = andrei_pokemon?.pikachu?.power ?? 'no power'
+console.log(power) // 0
+
+I get power of zero
+0
+
+if this was an or ||
+
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+
+in that case the result will be different
+
+//
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30,
+    power: 0
+  }
+}
+
+
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+console.log(power) // 'no power'
+
+//
+
+the result will be no power
+and we though actually have a value
+
+So again 
+Nullish Coalescing
+is really really useful
+for those occasions
+that you might use the orr operator ||
+
+Pretty pretty cool
+a think thats enough
+there is a few moe to cover
+with ES2020
+again we are gonna encounter 
+those throughout the rest 
+of the sections
+because they require a bit of other knowledge
+we are gonna ...
+So lets take a brake 
+and I see you in the next one
 */
