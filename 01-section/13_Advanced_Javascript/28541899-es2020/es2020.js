@@ -55,8 +55,9 @@ if (andrei_pokemon?.raichu && will_pokemon?.pikachu?.friend?.charizard) {
 	console.log('walk away ...')
 }
 // Exercise 4: What do these each output?
-console.log(false ?? 'hellooo')
-console.log(null ?? 'hellooo')
-console.log(null || 'hellooo')
-console.log((false || null) ?? 'hellooo')
-console.log(null ?? (false || 'hellooo'))
+// andrei
+console.log(false ?? 'hellooo') // false
+console.log(null ?? 'hellooo') // 'hellooo'
+console.log(null || 'hellooo') // 'hellooo'
+console.log((false || null) ?? 'hellooo') // 'hellooo'
+console.log(null ?? (false || 'hellooo')) //  'hellooo'
