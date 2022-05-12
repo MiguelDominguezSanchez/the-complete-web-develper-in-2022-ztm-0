@@ -355,4 +355,164 @@ so when we try to grab the pikachu
 from the andrei pokemon object
 is going  to say error
 
+So in the past the way we will solve this
+we would do an if statement
+right?
+
+So let me just remove wil for now
+and in here 
+lets minimize this so just 
+andrei_pokemon object
+
+and inhere instead of doing what we have done
+we would do if
+lets say andrei_pokemon dot pikachu
+and if andrei pokemon dot pikachu dot weight
+
+lets make it a little bit smaller so we can see
+
+if(andrei_pokemon.pikachu && andrei_pokemon.pikachu.weight) {
+  // then we want to create weight2 variable
+  let weight2 = andrei_pokemon.pikachu.weight
+} else {
+  // otherwise let weight2 is undefined
+  let weight2 = undefined
+}
+
+So by doing this we wont get that error
+we can check to see if andrei
+to see if andrei has pikachu
+if we just copy this over
+lets just remove this for now
+if just copy this over 
+hit enter
+
+//
+
+let will_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.4,
+    weight: 6
+  }
+}
+
+let andrei_pokemon = {
+  raichu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30
+  }
+}
+if(andrei_pokemon.pikachu && andrei_pokemon.pikachu.weight){
+  let weight2  = andrei_pokemon.pikachu.weight
+} else {
+  let weight2 = undefined
+  console.log(weight2)
+}
+
+//
+
+I get no errors
+you see I get undefined
+
+because it will realize that
+andrei_pokemon object doesn't contain pikachu
+
+so this is actually pretty annoying to do
+and you see often code basics
+
+doing this && and the doing andrei_pokemon
+and they keep checking
+does this object exist, does this object exists does this object exists and so on and so forth
+
+So te cool thing of optional chaining
+is that well, this avoid this complication
+
+So I can change this
+to say :
+
+let weight3 = andrei_pokemon
+
+I can say:
+Is there an object?
+
+let weight3 = andrei_pokemon?
+
+and then pikachu
+
+let weight3 = andrei_pokemon?.pikachu
+
+Is there an object?
+
+let weight3 = andrei_pokemon?.pikachu?
+
+or a property of andrei_pokemon
+that is pikachu?
+and then do dot weight
+
+let weight3 = andrei_pokemon?.pikachu?.weight
+
+So by doing this,
+check this out
+If I console.log weight
+and I copy this:
+
+//
+
+let andrei_pokemon = {
+  raichu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30
+  }
+}
+
+let weight3 = andrei_pokemon?.pikachu?.weight
+console.log(weight3) // undefined
+
+//
+
+I get the same result
+I get undefined
+because iit checks all of these
+eventually because 'pikachu' cannot be found
+in this object 'andrei_pokemon'
+its going to assign undefined
+to weight3 without any errors
+
+if i did have pikachu
+and i try this again
+
+//
+
+let andrei_pokemon = {
+  pikachu: {
+    species: 'Mouse Pokemon',
+    height: 0.8,
+    weight: 30
+  }
+}
+
+let weight3 = andrei_pokemon?.pikachu?.weight
+console.log(weight3) // 30
+
+//
+
+you see that I have 30
+so everything is working
+
+So instead of having 
+those long if statements
+I can just check for properties
+with this question mark '?'
+very very cool
+
+Now this video is getting long 
+So lets take a pause
+and then we are gonna visit 
+'Nullish Coalescing Operator'
+in the next video
+Bye bye
+
 */
