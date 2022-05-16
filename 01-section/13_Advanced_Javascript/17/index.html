@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function a(){
+      // one I use up 'a'
+      // as a variable
+      // in this case in the window object
+      // well I can never use 'a' again
+      // and maybe a hundred of line
+      // by mistake I assign a variable 'a'  
+      // and I rise my a function
+      // well thats a huge problem
+      // and thats a big problem in general
+      // you wanna make sure 
+      // that you don't pollute
+      // the 'Global Namespace'
+      // that is the window object
+      // with all these names
+      // because then you have collisions
+      // you have different team members
+      // working on different pieces of code
+      // and all of a sudden 
+      // we go out with the same name
+      // its a big problem
+      alert('a')
+    }
+    function b(){
+      alert('b')
+    }
+    function c(){
+      alert('c')
+    }
+    function d(){
+      alert('d')
+    }
+  </script>
+
+  <script>
+    /*
+    the next attempt was script tags
+    and this iis something that we are familiar with
+    instead of having inline
+    we have script tags
+    and we already play around 
+    with bootstrap and jQuery
+    this is what we did
+    we had our jQuery file
+    that loads first
+    then our javascript file loads second
+    and as you can see 
+    we have one javascript file
+    then the second one,
+    then the third,
+    then the fourth one,
+    this way you have
+    everything outside of the html
+    so iit solved the problem
+
+    Well the problem with script tag
+    as far as I can see 
+    are three things
+
+    if we need to add another page
+    and an about page
+    we still have to copy and paste
+    these script tags
+    and again we don't really wanna do that
+
+    The second one is the lack of
+    'Dependency Resolution'
+    and that means that you are responsible 
+    to make sure that the scripts are added in the proper
+    for example if this script '1.js'
+    accesses a function for
+    the number '4.js'
+    well
+    its gonna fail
+    because the number '4.js' file
+    hasn't load yet
+    so thats lack of dependency resolution
+
+    and finally the third
+    this doesn't really solve
+    the global nanmespace problem
+    its polluting the global namespace
+    all the functions and variables
+    that are declared in each of this files
+    will be on the window object
+
+    ok what about the third attempt
+
+    IIFE
+
+    Immediately Invoked Function Expression
+    I know thats a mouth full
+    but it looks something like this
+
+    go to the javascript fil in this folder
+
+    /.../
+
+    */
+  </script>
+  <script type="text/javascript" src="./1.js"></script>
+  <script type="text/javascript" src="./1.js"></script>
+  <script type="text/javascript" src="./1.js"></script>
+  <script type="text/javascript" src="./1.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
