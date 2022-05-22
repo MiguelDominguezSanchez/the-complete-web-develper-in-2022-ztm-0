@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Hello from './Hello'
 import reportWebVitals from './reportWebVitals'
+import 'tachyons'
 
 // ReactDOM.render(<Hello />, document.getElementById('root'))
 
@@ -13,7 +14,7 @@ import reportWebVitals from './reportWebVitals'
 // 	</React.StrictMode>
 // )
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Hello />)
+root.render(<Hello greeting={'Hello ' + 'React Ninja'} />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
