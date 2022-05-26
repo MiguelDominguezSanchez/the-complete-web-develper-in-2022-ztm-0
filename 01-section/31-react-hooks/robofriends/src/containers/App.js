@@ -21,6 +21,13 @@ function App() {
 	// 		.then((response) => response.json())
 	// 		.then((users) => this.setState({ robots: users }))
 	// }
+	useEffect(() => {
+		fetch('https://jsonplaceholder.typicode.com/users')
+			.then((response) => response.json())
+			.then((users) => {
+				setRobots(users)
+			})
+	}, [])
 
 	const onSearchChange = (event) => {
 		setSearchfield(event.target.value)
@@ -29,7 +36,7 @@ function App() {
 	const filteredRobots = robots.filter((robot) => {
 		return robot.name.toLowerCase().includes(searchfield.toLowerCase())
 	})
-	console.log(robots, searchfield)
+
 	return !robots.length ? (
 		<h1>Loading</h1>
 	) : (
